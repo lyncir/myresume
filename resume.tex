@@ -1,0 +1,150 @@
+\documentclass[11pt,letterpaper]{article}
+
+%-----------------------------------------------------------
+\usepackage{CJK}
+\usepackage{array}
+\usepackage{url}
+
+\usepackage[empty]{fullpage}
+\textheight=9.0in
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{0.375in}
+\addtolength{\textwidth}{0.5in}
+\addtolength{\topmargin}{-.375in}
+\addtolength{\textheight}{0.75in}
+
+\usepackage{xcolor}
+\definecolor{bl3}{RGB}{32,57,109}
+
+\usepackage{titlesec}
+\titleformat{\section}{\color{bl3}\large\scshape\bfseries\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\twocol}[2]{
+\begin{tabular}{p{1.4cm}l}
+	\textit{#1} & #2\\
+\end{tabular}}
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+	\textbf{#1} & \url{#2} \\
+	\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
+
+\begin{document}
+\begin{CJK}{UTF8}{gbsn}
+
+%-----------------Info-------------------
+\begin{tabular}{p{1.2cm}l}
+	姓名: & 陈昌明\\
+	电话: & 18010181614\\
+	邮箱: & chiongming.chan@gmail.com\\
+\end{tabular}
+\\
+\vspace{0.1in}
+
+%----------------Education---------------
+\section{教育}  
+	\begin{itemize}
+	 	\item    
+			\ressubheading{福州大学 - 工程技术学院}{http://etc.fzu.edu.cn}{网络系统管理}{2008.07 -- 2011.07}
+				{ \footnotesize
+				\begin{itemize}
+						\resitem{\textbf{主要课程: }操作系统原理, TCP/IP协议原理与应用, Red Hat Enterprise Linux 系统管理, Cisco ASA,PIX与FWSM防火墙手册, Windows Server 2003 系统管理, SQL 2005 管理开发, CCNA学习指南, Exchange Server 2007, Visual C\# .NET应用教程, 网络安全技术, 计算机应用技术}
+						\resitem{\textbf{学生奖励: }}
+						\begin{itemize}
+							\item{\twocol{2011.05}{福州大学工程技术学院三等奖学金}}
+							\item{\twocol{2010.05}{福州大学工程技术学院一等奖学金}}
+							\item{\twocol{2010.05}{福州大学工程技术学院优秀团员}}
+							\item{\twocol{2009.05}{福州大学工程技术学院优秀学员}}
+						\end{itemize}
+				\end{itemize}
+			 	}
+	\end{itemize}
+
+%------------ -  ---Experience------------- --
+\section {经验}   
+	\begin{itemize}
+		\item 
+			\ressubheading{盘丝无限科技有限公司}{http://www.pansi.me}{Linux系统运维工程师}{2011.07 -- Present}
+				{ \footnotesize
+				\begin{itemize}
+						\resitem{负责Linux平台服务器的运维和管理:包括配置,监控,系统性能优化,网络安全及备份等}
+						\resitem{负责Linux服务器架构设计,规划和实施,以及负载均衡和故障切换}
+						\resitem{负责公司内部服务基础建设,如:LDAP,Git,VsFTP,Hudson,Trac,Testlink,Bugzilla,OpenVPN等}
+						\resitem{负责Linux下常用脚本编写,对其他人员提供linux系统使用支持}
+				\end{itemize}
+			 	}     
+		\item  
+			\ressubheading{厦门源点胶粘制品有限公司}{http://www.roundots.com}{系统管理员}{2011.03 -- 2011.06}
+				{ \footnotesize
+				\begin{itemize}
+						\resitem{负责公用网络实体,如服务器,PC,路由器,交换机,打印机等设备进行维护和管理,网络软件的安装,维护,调整及更新}
+						\resitem{监视网络运行,调整网络参数,调度网络资源,保持网络安全,稳定,通畅}
+						\resitem{负责公司网站编写与建设,主机,域名等管理,并维护系统安全}
+				\end{itemize}
+				}    
+%		\item
+%			\ressubheading{北京交通管理干部学院}{http://www.bjjtxy.bj.cn}{网络管理员}{2010.09 -- 2011.01}
+%				{ \footnotesize
+%				\begin{itemize}
+%						\resitem{负责组织对本校网络设备,计算机及服务器的维护和管理}
+%						\resitem{负责病毒的查杀,维护网络系统安全并处理网络及计算机故障}
+%				\end{itemize}
+%				}   
+	\end{itemize}
+
+%----------------Projects-------------------- 
+\section{项目}  
+	\begin{itemize}
+		\item{\textbf{盘丝服务器架构和部署}}\vspace{-6pt}
+			{\footnotesize
+			\begin{itemize}
+				\resitem{前端使用HAProxy做负载均衡}
+				\resitem{后端为Openfire和Tomcat应用软件,数据库为MySQL}
+				\resitem{其中MySQL之间互为主从进行数据同步}
+			\end{itemize}
+			} 
+		\item{\textbf{盘丝监控服务器部署}}\vspace{-6pt}
+			{\footnotesize
+			\begin{itemize}
+				\resitem{使用Cacti,对服务器资源进行监控(如:cpu,memory,network,haproxy,apache,tomcat,mysql等)}
+				\resitem{使用Nagios,对服务器的服务进行监控(如:HTTP Port,MySQL Replication等),并进行警报通知}
+			\end{itemize}
+			} 
+		\item{\textbf{厦门源点主页}}\vspace{-6pt}
+			{\footnotesize
+			\begin{itemize}
+				\resitem{使用div, css, js编写}
+				\resitem{提供网站的主机,域名,备案的支持和管理}
+			\end{itemize}
+			} 
+	\end{itemize}
+
+%----------------Skills------ ---------  
+\section{技能}
+	\begin{description}
+		\item[语言:] { \footnotesize C, Shell, Python, Ruby, \LaTeX }
+		\item[操作系统:] { \footnotesize Linux, Solaris, FreeBSD, VMWare ESX/ESXi }
+		\item[应用程序:] { \footnotesize Haproxy, MySQL, Apa che, Nginx, Tomcat, Keepalived, DRBD, Rsync, Unison, Puppet, MRTG, Cacti, Nagios, Git, Trac, Bugzilla, Hudson, Testlink }
+	\end{description}
+
+%----------------Interests------------ -  
+%\section{兴趣}
+%	\begin{description}
+%		\item[运动:] { \footnotesize 羽毛球,网球 }
+%		\item[计算机:] { \footnotesize Linux(gentoo) }
+%		\item[其它:] { \footnotesize 听音乐(douban.fm),上网(OSC,CU),看小说 }
+%	\end{description}
+
+\end{CJK} 
+\end{document}
